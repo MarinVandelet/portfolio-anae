@@ -89,7 +89,7 @@ export default function About() {
           {/* Portrait */}
           <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden mb-4">
             <img
-              src="/images/portrait.png"
+              src="/images/portrait.jpg"
               alt="portrait"
               className="w-full h-full object-cover"
             />
@@ -115,4 +115,5 @@ export default function About() {
     </section>
   );
 }
+
 
