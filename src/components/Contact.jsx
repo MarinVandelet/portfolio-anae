@@ -71,7 +71,7 @@ export default function Contact() {
             <h3 className="text-xl font-semibold mb-2 text-violet">Téléphone</h3>
             <p className="text-base text-white/90">06 01 43 93 69</p>
             <p className="text-sm text-neutral-400 mt-3">
-              Disponible 10h–19h · Lundi → Samedi
+              Envoyez moi un message
             </p>
           </motion.div>
 
@@ -131,3 +131,4 @@ export default function Contact() {
     </section>
   );
 }
+
