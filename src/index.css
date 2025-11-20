@@ -1,0 +1,14 @@
+/* Reset simplifié */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ne rien rajouté */
+
