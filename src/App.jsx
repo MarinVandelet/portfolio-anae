@@ -1,10 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar.jsx";
-import HomeBanner from "./components/HomeBanner.jsx";
 import Background from "./components/Background.jsx";
 
-// nouvelles sections
+// Pages
+import HomeBanner from "./components/HomeBanner.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
+import Mode from "./pages/Mode.jsx";
 
 export default function App() {
   return (
@@ -13,9 +16,30 @@ export default function App() {
       <Navbar />
 
       <main className="pt-0">
-        <HomeBanner />
-        <About />
-        <Contact />
+
+        <Routes>
+
+          {/* PAGE ACCUEIL */}
+          <Route
+            path="/"
+            element={
+              <>
+                <HomeBanner />
+                <About />
+                <Contact />
+              </>
+            }
+          />
+
+          {/* PAGE MODE */}
+          <Route path="/mode" element={<Mode />} />
+
+          {/* Tu ajouteras plus tard : FX, On-me */}
+          {/* <Route path="/fx" element={<FX />} /> */}
+          {/* <Route path="/on-me" element={<OnMe />} /> */}
+
+        </Routes>
+
       </main>
     </div>
   );
