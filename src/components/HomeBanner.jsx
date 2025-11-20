@@ -23,27 +23,34 @@ export default function HomeBanner() {
         transition={{ duration: 1 }}
         className="relative z-10 text-center px-6"
       >
-      <motion.h1
-        style={{ 
-          fontFamily: "Parisienne",
-          transformOrigin: "50% 60%"  // 🔥 stabilise totalement le mouvement
-        }}
-        animate={{ scale: 1.02 }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          repeatType: "mirror",
-          ease: "easeInOut",
-        }}
-        className="text-7xl md:text-[150px] font-bold text-white tracking-wide drop-shadow-[0_0_35px_rgba(140,40,255,1)]"
-      >
-        Anaé Delmas
-      </motion.h1>
+        <motion.h1
+          style={{
+            fontFamily: "Parisienne",
+            transformOrigin: "50% 60%",
+          }}
+          animate={{ scale: 1.02 }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          }}
+          className="
+            text-[48px]           /* Mobile */
+            sm:text-[70px]        /* Petit écran */
+            md:text-[110px]       /* Tablette */
+            lg:text-[150px]       /* Desktop */
+            font-bold 
+            text-white 
+            tracking-wide 
+            drop-shadow-[0_0_20px_rgba(140,40,255,0.9)]
+            md:drop-shadow-[0_0_35px_rgba(140,40,255,1)]
+          "
+        >
+          Anaé Delmas
+        </motion.h1>
 
-
-
-
-        <p className="mt-4 text-xl md:text-2xl font-light text-white/90">
+        <p className="mt-4 text-lg sm:text-xl md:text-2xl font-light text-white/90">
           Makeup Artist – Mode, FX & Création Visuelle
         </p>
       </motion.div>
