@@ -12,16 +12,19 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full flex justify-center fixed top-6 z-50">
+    <div className="w-full flex justify-center fixed top-4 z-50 px-4">
       <motion.nav
         initial={{ scale: 1 }}
-        whileHover={{ scale: 1.06 }}         // 👉 agrandissement au hover
+        whileHover={{ scale: 1.06 }}
         transition={{ type: "spring", stiffness: 200, damping: 18 }}
         className="
           relative bg-white/10 backdrop-blur-xl 
-          px-10 py-4 rounded-full border border-white/20 
+          px-6 py-3 md:px-10 md:py-4 rounded-full 
+          border border-white/20 
           shadow-[0_0_35px_rgba(76,42,255,.5)] 
-          flex gap-10
+          flex gap-4 md:gap-10 
+          max-w-full
+          overflow-hidden
         "
       >
         {tabs.map((tab) => {
@@ -31,7 +34,12 @@ export default function Navbar() {
             <NavLink
               key={tab.path}
               to={tab.path}
-              className="relative px-4 py-1 font-semibold text-white"
+              className="
+                relative px-2 md:px-4 py-1 
+                font-semibold 
+                text-sm md:text-base 
+                text-white
+              "
             >
               {active && (
                 <motion.div
