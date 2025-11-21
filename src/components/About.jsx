@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { Sparkles, Brush, Scissors, Flame, Droplets } from "lucide-react";
+import HighlightedTitle from "../components/HighlightedTitle";
+
 
 export default function About() {
   return (
@@ -15,11 +18,8 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="lg:col-span-4 flex flex-col h-full"
-        >
-          <h2 className="text-5xl font-bold mb-10 text-canard">
-            À propos d’Anaé
-          </h2>
+          className="lg:col-span-4 flex flex-col h-full">
+          <HighlightedTitle />
 
           <p className="text-lg text-neutral-300 leading-relaxed">
             Anaé Delmas est une makeup artiste spécialisée en maquillage
@@ -58,19 +58,67 @@ export default function About() {
             Ce que je fais
           </h3>
 
-          <ul className="space-y-4 text-neutral-300 text-lg">
-            <li>• Maquillage mode & éditorial</li>
-            <li>• Maquillage artistique & conceptuel</li>
-            <li>• FX légers (contusions, déchirures, illusions)</li>
-            <li>• Création de textures & couleurs uniques</li>
-            <li>• Maquillage beauté studio</li>
-            <li>• Projets artistiques conceptuels</li>
-          </ul>
+      {/* LISTE */}
+      <ul className="space-y-6 text-neutral-300 text-lg">
+        {/* 1 */}
+        <li className="flex items-start gap-4">
+          <Sparkles 
+            size={28} 
+            className="text-[#C58AFF] drop-shadow-[0_0_10px_rgba(197,138,255,0.9)] mt-[4px]" 
+          />
+          <p>
+            <span className="font-semibold text-white">Maquillages mode & éditorial</span><br/>
+          </p>
+        </li>
+
+        {/* 2 */}
+        <li className="flex items-start gap-4">
+          <Brush 
+            size={28} 
+            className="text-[#4DDCEB] drop-shadow-[0_0_10px_rgba(77,220,235,0.9)] mt-[4px]"
+          />
+          <p>
+            <span className="font-semibold text-white">Maquillages artistiques & conceptuels</span><br/>
+          </p>
+        </li>
+
+        {/* 3 */}
+        <li className="flex items-start gap-4">
+          <Scissors 
+            size={28} 
+            className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mt-[4px]"
+          />
+          <p>
+            <span className="font-semibold text-white">FX légers</span> (contusions, déchirures, illusions)<br/>
+          </p>
+        </li>
+
+        {/* 4 */}
+        <li className="flex items-start gap-4">
+          <Flame 
+            size={28} 
+            className="text-[#B17BFF] drop-shadow-[0_0_12px_rgba(177,123,255,1)] mt-[4px]"
+          />
+          <p>
+            <span className="font-semibold text-white">Création de prothèses</span><br/>
+          </p>
+        </li>
+
+        {/* 5 */}
+        <li className="flex items-start gap-4">
+          <Droplets 
+            size={28} 
+            className="text-[#FF3A3A] drop-shadow-[0_0_14px_rgba(255,58,58,0.9)] mt-[4px]"
+          />
+          <p>
+            <span className="font-semibold text-white">Maquillages gores et sanglants</span><br/>
+          </p>
+        </li>
+      </ul>
         </motion.div>
 
-        {/* =============================== */}
-        {/* COL 3 : CV CARD (3/12)         */}
-        {/* =============================== */}
+
+        {/* CV CARD */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +145,7 @@ export default function About() {
 
           {/* Bouton */}
           <a
-            href="/cv/cv-anae.pdf"
+            href="/images/cv/cv-anae.pdf"
             download
             className="
               mt-2 block text-center w-full py-3 
