@@ -44,9 +44,7 @@ export default function HomeBanner() {
             text-white 
             tracking-wide 
             drop-shadow-[0_0_20px_rgba(140,40,255,0.9)]
-            md:drop-shadow-[0_0_35px_rgba(140,40,255,1)]
-          "
-        >
+            md:drop-shadow-[0_0_35px_rgba(140,40,255,1)]">
           Anaé Delmas
         </motion.h1>
 

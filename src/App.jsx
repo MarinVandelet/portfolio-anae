@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar.jsx";
 import Background from "./components/Background.jsx";
+import OnMe from "./pages/OnMe";
+
 
 // Pages
 import HomeBanner from "./components/HomeBanner.jsx";
@@ -33,6 +35,8 @@ export default function App() {
 
           {/* PAGE MODE */}
           <Route path="/mode" element={<Mode />} />
+          <Route path="/on-me" element={<OnMe />} />
+
 
           {/* Tu ajouteras plus tard : FX, On-me */}
           {/* <Route path="/fx" element={<FX />} /> */}

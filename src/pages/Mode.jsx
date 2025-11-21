@@ -24,13 +24,10 @@ export default function Mode() {
     { src: "https://res.cloudinary.com/dphdsmavu/image/upload/v1763676262/19_mkhdjs.jpg", legend: "Effet wet – peau glowy." },
     { src: "https://res.cloudinary.com/dphdsmavu/image/upload/v1763676265/14_jf681a.jpg", legend: "Effet wet – peau glowy." },
     { src: "https://res.cloudinary.com/dphdsmavu/image/upload/v1763676266/13_vyxz5k.jpg", legend: "Effet wet – peau glowy." },
-
-    // Ajoute autant que tu veux
   ];
 
   return (
     <section className="pt-32 pb-20 bg-black text-white min-h-screen">
-
       <ModeGallery images={images} />
     </section>
   );
